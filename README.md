@@ -33,29 +33,36 @@ SNAPDIR is an ITOps/DevOPS bash script tool to compare directories, it allows yo
 ## Getting-Started
 
 1. Save a snapshot of directory xplorer into file savefile01
+
 ./snapdir.sh -a DUMPDIR -f savefile01 -d xplorer
 ![terminal](https://github.com/Hairi81/SNAPDIR/blob/main/wiki_images/dumpdir_wiki.gif?raw=true)
 
 2. Compare snapshot file savefil01 against directory xplorer
+
 ./snapdir.sh -a CHECKDIR -f savefile01 -d xplorer
 ![terminal](https://github.com/Hairi81/SNAPDIR/blob/main/wiki_images/checkdir_wiki.gif?raw=true)
 
 
 3. Print the directory structure of snapshot file savefile01
+
 ./snapdir.sh -a PRINTFILE -f savefile01
 ![terminal](https://github.com/Hairi81/SNAPDIR/blob/main/wiki_images/printfile_wiki.gif?raw=true)
 
 
 ## Regex
 4. To only compare files with .js extensions
+
 ./snapdir.sh -a CHECKDIR -f savefile01 -d xplorer -g '\.js'
 
 5. To exclude .js files from comparison
+
 ./snapdir.sh -a CHECKDIR -f savefile01 -d xplorer -g '\.js' -i
 
 ## Verbosity
 6. To only display warning messages or above and disable progress bar [-s]
+
 ./snapdir.sh -a CHECKDIR -f savefile01 -d xplorer -g '\.js' -i -v WARN -s
+
 Message Levels : 
 DEBUG : Debugging messages
 INFO : Normal operations including file matches
@@ -65,6 +72,7 @@ ERROR : Checksum missmatch or file not found
 
 ## Subfolders
 7. To Compare directory mysources to subfolder src in savefile01
+
 ./snapdir.sh -a CHECKDIR -f savefile01 -d mysources -b /src 
 
 
