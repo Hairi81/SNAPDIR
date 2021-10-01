@@ -83,7 +83,7 @@ You can edit the snapshot file with any text editor to add or remove specific it
 
 ./snapdir.sh -a MOVEDIR -f savefile01 -d /src -b /backup_src
 
-Not the use of leading "/" to indicate the directory is located in the root of the snapshot file, using with a leading slash will move every directory and subdirectory in the snapshot file named src xplorer to backup_xplorer
+Note the use of leading "/" to indicate the directory is located in the root of the snapshot file, using without a leading slash will move every directory and subdirectory in the snapshot file named src xplorer to backup_xplorer
 
 9. Move all files in the directory src in the snapshot file savefile01, having the extension .js to backup_js
 
