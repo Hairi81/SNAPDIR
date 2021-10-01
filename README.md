@@ -72,17 +72,20 @@ ERROR : Checksum missmatch or file not found
 You can edit the snapshot file with any text editor to add or remove specific items, use a leading # to comment a line. Below are helper file operations supported from the snapdir script.
 
 8. Move the directory in the snapshot file savefile01, src to backup_src
+
 ./snapdir.sh -a MOVEDIR -f savefile01 -d /src -b /backup_src
-Not the use of leading "/" to indicate the directory is located in the root of the snapshot file, using
-with a leading slash will move every directory and subdirectory in the snapshot file named src xplorer to backup_xplorer
+
+Not the use of leading "/" to indicate the directory is located in the root of the snapshot file, using with a leading slash will move every directory and subdirectory in the snapshot file named src xplorer to backup_xplorer
 
 9. Move all files in the directory src in the snapshot file savefile01, having the extension .js to backup_js
+
 ./snapdir.sh -a MOVEFILES -f savefile01 -d /src -b /backup_js -g '\.js'
+
 This operation will flatten the directory structure into backup_js
 
 
 ## Manual
-
+<pre>
 Usage: /home/hairi/bashlab/snapdir.sh -a ACTION -f FILENAME -d DIRECTORY
    -a ACTION        action flag, specifies the type of action to be performed
                           DUMPDIR  : dump directory list of files DIRECTORY into file FILENAME
@@ -100,7 +103,7 @@ Usage: /home/hairi/bashlab/snapdir.sh -a ACTION -f FILENAME -d DIRECTORY
    -v LEVELS         verbosity levels : DEBUG, INFO, WARN, ERROR
    -i                invert regex matching pattern of -g regex
    -b DIRNAME        rebase to subfolder
-
+</pre>
 
 ## Contact
 Email me at hairi.abass@gmail.com
